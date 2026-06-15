@@ -1,0 +1,19 @@
+# Keep the Docker build context small: only upload/ + docker/ are needed.
+.git
+.github
+.agents
+.claude
+docs
+tests
+tools
+opencart
+vendor
+node_modules
+reports
+*.md
+phpunit.xml
+phpstan.neon
+.php-cs-fixer.dist.php
+skills-lock.json
+composer.json
+composer.lock
