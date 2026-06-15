@@ -1,0 +1,10 @@
+parameters:
+    level: 0
+    paths:
+        - tests
+    bootstrapFiles:
+        - upload/system/storage/vendor/autoload.php
+    ignoreErrors:
+        # OpenCart classes are loaded by OpenCart's own autoloader, not visible to PHPStan
+        - '#Opencart\\System\\#'
+    reportUnmatchedIgnoredErrors: false
