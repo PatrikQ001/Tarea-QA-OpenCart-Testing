@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Pruebas Unitarias - OpenCart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <!-- Ícono FontAwesome -->
+            <i class="fa-solid fa-square-check"></i>
+            <!-- Logo oficial desde URL -->
+            <img src="https://www.opencart.com/application/view/image/icon/opencart-logo.png" 
+                alt="Logo OpenCart" 
+                class="logo-img">
+            <!-- Texto del proyecto -->
+            <span>Proyecto QA OpenCart</span>
+            
+        </div>
+            <nav class="top-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="unitarias.html">Pruebas Unitarias</a></li>
+                <li><a href="#">Pruebas de Integración</a></li>
+                <li><a href="#">Pruebas de Composición</a></li>
+                <li><a href="#">Pruebas de Sistema</a></li>
+            </ul>
+        </nav>
+
+        <div><img src="OIP.webp" alt="logo" style="width:50px; height:auto;"></div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Nueva sección de integrantes estilizada -->
+        <section class="card section-spacing-bottom">
+            <h2><span class="step-num"><i class="fa-solid fa-users"></i></span> Integrantes</h2>
+            <p class="table-intro">Equipo de ingeniería a cargo del plan de pruebas:</p>
+            <ul class="list-features grid-integrantes">
+                <li>Yucra Machacca, Mariana Grethel</li>
+                <li>Suasaca Pacompia, Alvaro Gustavo</li>
+                <li>Quispe Bejar, Garlet Analy</li>
+                <li>Valdiviezo Tovar, Alexander</li>
+                <li>Aguero Guerreros, Luis Daniel</li>
+            </ul>
+        </section>
+
+        <!-- Título Principal -->
+        <section class="main-title">
+            <h2>1. Plan de Pruebas Unitarias</h2>
+            <p class="subtitle">Aseguramiento de calidad y estabilidad del núcleo del sistema</p>
+        </section>
+
+        <!-- Dos Columnas: Objetivo y Alcance -->
+        <div class="grid-2col">
+            <div class="card">
+                <h2><span class="step-num">1.1</span> Objetivo</h2>
+                <p>Asegurar la calidad y el correcto funcionamiento a nivel de código de los componentes individuales de OpenCart. Se validará que las funciones y métodos de los módulos seleccionados retornen los valores esperados ante diferentes escenarios (datos válidos, inválidos y casos extremos).</p>
+            </div>
+
+            <div class="card">
+                <h2><span class="step-num">1.2</span> Alcance</h2>
+                <p>El plan cubrirá exclusivamente la capa lógica (controladores y modelos) de los siguientes 6 módulos críticos del sistema:</p>
+                <ul class="list-features">
+                    <li><strong>Clientes y Autenticación:</strong> Lógica de validación de registro, verificación de formato de credenciales, recuperación de contraseñas y sanitización de perfiles.</li>
+                    <li><strong>Catálogo y Búsqueda:</strong> Lógica de ordenamiento de productos, algoritmos de filtrado por características, sanitización de la barra de búsqueda y validación de reglas para reseñas.</li>
+                    <li><strong>Carrito y Flujo de Checkout:</strong> Cálculos matemáticos del carrito (agregar/eliminar), sumatorias de subtotales, y aplicación lógica de cupones de descuento.</li>
+                    <li><strong>Ventas e Inventario:</strong> Funciones de validación de estados de pedido (Pendiente, Completado, Rechazado) y la lógica matemática para el descuento de stock.</li>
+                    <li><strong>Localización, Impuestos y Configuración:</strong>  Lógica de conversión de múltiples monedas, aplicación de reglas por zonas geográficas y validación de formatos de configuración.</li>
+            </div>
+        </div>
+
+        <!-- Herramientas y Entorno -->
+        <section class="card section-spacing">
+            <h2><span class="step-num">1.3</span> Herramientas y Entorno</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <i class="fa-brands fa-php tool-icon"></i>
+                    <div>
+                        <h3>Framework de Pruebas</h3>
+                        <p>PHPUnit (Estándar para proyectos en PHP como OpenCart).</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <i class="fa-solid fa-kanban tool-icon"></i>
+                    <div>
+                        <h3>Gestión de Tareas</h3>
+                        <p>GitHub Projects (Tablero Kanban del repositorio).</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <i class="fa-brands fa-github tool-icon"></i>
+                    <div>
+                        <h3>Control de Versiones</h3>
+                        <p>Repositorio centralizado en GitHub.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asignación de Equipo -->
+        <section class="card section-spacing">
+            <h2><span class="step-num">1.4</span> Asignación del Equipo</h2>
+            <p class="table-intro">Distribución equitativa para la redacción, codificación y ejecución de pruebas:</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Módulo Asignado</th>
+                            <th>Responsable</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Clientes y Autenticación</td>
+                            <td><strong>Mariana</strong></td>
+                            <td><span class="status-badge badge-pending"><i class="fa-solid fa-clock"></i> Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>2. Catálogo y Búsqueda</td>
+                            <td><strong>Alvaro</strong></td>
+                            <td><span class="status-badge badge-pending"><i class="fa-solid fa-clock"></i> Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>3. Carrito y Flujo de Checkout</td>
+                            <td><strong>Garlet</strong></td>
+                            <td><span class="status-badge badge-pending"><i class="fa-solid fa-clock"></i> Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>4. Ventas e Inventario</td>
+                            <td><strong>Alexander</strong></td>
+                            <td><span class="status-badge badge-pending"><i class="fa-solid fa-clock"></i> Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>5. Localización, Impuestos y Configuración:</td>
+                            <td><strong>Daniel</strong></td>
+                            <td><span class="status-badge badge-pending"><i class="fa-solid fa-clock"></i> Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Criterios de Éxito -->
+        <section class="card section-spacing success-zone">
+            <h2><span class="step-num">1.5</span> Criterios de Éxito</h2>
+            <p>Una prueba unitaria se considerará finalizada cuando cumpla los siguientes requisitos:</p>
+            <div class="success-grid">
+                <div class="success-item">
+                    <i class="fa-solid fa-route success-icon"></i>
+                    <p>El código de la prueba cubre rutas de éxito y rutas de error.</p>
+                </div>
+                <div class="success-item">
+                    <i class="fa-solid fa-circle-check success-icon green"></i>
+                    <p>La ejecución en PHPUnit retorna un estado verde (Aprobado).</p>
+                </div>
+                <div class="success-item">
+                    <i class="fa-regular fa-circle-dot success-icon"></i>
+                    <p>Está registrada como una Issue cerrada en GitHub Projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentación del producto -->
+        <section class="card section-spacing">
+            <h2><span class="step-num">2.</span>¿Qué es OpenCart?</h2>
+            <div class="product-presentation">
+                <p><strong>OpenCart</strong> es un sistema de gestión de contenidos (CMS) de código abierto diseñado específicamente para el comercio electrónico. Proporciona una base profesional y fiable para construir una tienda online exitosa.</p>
+                <p>Está desarrollado con el lenguaje de programación PHP y bases de datos MySQL/MariaDB. Su arquitectura sigue el patrón de diseño <strong>MVC-L (Model-View-Controller-Language)</strong>, una variante del MVC tradicional que separa de forma estricta la lógica de negocio, la interfaz de usuario y los archivos de traducción para la internacionalización.</p>
+                
+                <div class="history-box">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Breve Reseña Histórica</h3>
+                    <p>OpenCart fue creada originalmente en 1998 por Christopher G. Mann como una aplicación de comercio electrónico mucho más sencilla. La primera versión pública fue lanzada el 11 de mayo de 1999 y estaba escrita en el lenguaje Perl. Esta primera versión fue abandonada y retomada en 2009 por el desarrollador Daniel Kerr al ver potencial en la aplicación decidió reescribir OpenCart por completo desde cero cambiando el lenguaje obsoleto de Perl por PHP.</p>
+                </div>
+                
+                <p class="highlight-text"><i class="fa-solid fa-star"></i> OpenCart permite la capacidad de gestionar múltiples tiendas desde un único panel de administración, mercado de extensiones y pasarela de pagos integradas.</p>
+            </div>
+        </section>
+
+        <section class="card section-spacing">
+            <h2><span class="step-num">3.</span> Justificación de Elección</h2>
+            <p class="table-intro">La selección de OpenCart como el Sistema Bajo Prueba se fundamenta bajo el cumplimiento técnico de los criterios y exigencias de la rúbrica de evaluación:</p>
+            
+            <div class="justification-grid">
+                <div class="justification-item">
+                    <h3><i class="fa-solid fa-file-shield text-blue"></i> Compatibilidad de Licencia</h3>
+                    <p>OpenCart está distribuido bajo la licencia <strong>GNU General Public License (GPLv3)</strong>. Esta licencia de código abierto cumple con el requisito de permitir el <em>forking</em>, la modificación del código fuente y el uso libre sin ningún tipo de restricciones académicas o legales, permitiendo la inyección de las suites de pruebas sin inconvenientes.</p>
+                </div>
+
+                <div class="justification-item">
+                    <h3><i class="fa-solid fa-shop text-blue"></i> Dominio Comercial Altamente Transaccional (PyMEs)</h3>
+                    <p>El dominio de la plataforma corresponde al <strong>e-commerce</strong>, enfocado directamente en soluciones empresariales para pequeñas y medianas empresas (PyMEs). Desde la perspectiva de QA, este dominio posee flujos de ejecución críticos como la gestión de sesiones, carrito de compras, cálculo automatizado de impuestos y pasarelas de pago.</p>
+                </div>
+
+                <div class="justification-item">
+                    <h3><i class="fa-solid fa-code text-blue"></i> Stack Tecnológico Vigente en la Industria</h3>
+                    <p>El producto utiliza un stack basado en <strong>PHP y MySQL/MariaDB</strong>, bajo el patrón arquitectónico <strong>MVC-L</strong>. OpenCart permite implementar pruebas unitarias (Unit Testing) efectivas sin la necesidad de levantar dependencias complejas de la interfaz gráfica, utilizando herramientas como <strong>PHPUnit</strong>.</p>
+                </div>
+
+                <div class="justification-item">
+                    <h3><i class="fa-solid fa-cubes text-blue"></i> Complejidad Arquitectónica y Volumetría Adecuada (KLOC)</h3>
+                    <p>OpenCart clasifica como un proyecto de complejidad mediana ideal para un entorno académico controlado. Cuenta con un rango de líneas de código fuente entre las <strong>25 KLOC y 45 KLOC</strong> cumpliendo con el estándar requerido. Además posee de más de 5 módulos core claramente definidos:</p>
+                    <ul class="list-features mini-list">
+                        <li>Login y Registro</li>
+                        <li>Carrito de Compras</li>
+                        <li>Checkout / Pago</li>
+                        <li>Catálogo y Búsqueda</li>
+                        <li>Gestión de Inventario</li>
+                        <li>Sistema de Reseñas</li>
+                    </ul>
+                </div>
+
+                <div class="justification-item">
+                    <h3><i class="fa-solid fa-server text-blue"></i> Infraestructura DevOps Adaptable (CI/CD)</h3>
+                    <p>El proyecto permite una integración nativa con herramientas como <strong>Docker y Docker Compose</strong> para empaquetar el servidor web (Apache/Nginx), el motor PHP y la base de datos MySQL.</p>
+                </div>
+
+                <div class="justification-item">
+                    <h3><i class="fa-solid fa-vial-circle-check text-blue"></i> Idoneidad para Pruebas de Regresión</h3>
+                    <p>Al ser un software maduro pero en constante actualización, OpenCart es idóneo para simular escenarios reales donde la introducción de nuevas extensiones o parches requiere un conjunto robusto de <strong>pruebas de regresión</strong> para asegurar que las características núcleo no se corrompan a lo largo de los diferentes Sprints.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 OpenCart QA Team Apis Melifera.</p>
+    </footer>
+
+</body>
+</html>
